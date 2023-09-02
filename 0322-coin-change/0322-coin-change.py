@@ -1,11 +1,8 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 
-        
-
-
         def minCoins(c, n, V):
-            t = [[0 if j == 0 else float('inf') - 1 for j in range(V + 1)] for _ in range(n + 1)]
+            t = [[0 if j == 0 else float('inf')  for j in range(V + 1)] for _ in range(n + 1)]
 
             for i in range(1, n + 1):
                 for j in range(1, V + 1):
@@ -14,7 +11,7 @@ class Solution:
                     else:
                         t[i][j] = t[i - 1][j]
 
-            ans = t[n][V] if t[n][V] != float('inf') - 1 else -1
+            ans = t[n][V] if t[n][V] != float('inf') else -1
             return ans
         
 
