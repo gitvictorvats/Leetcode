@@ -1,20 +1,20 @@
+from functools import lru_cache
+
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
 
-        def minCoins(c, n, V):
-            t = [[0 if j == 0 else float('inf')  for j in range(V + 1)] for _ in range(n + 1)]
+        @lru_cache(None)
+        def dfs(rem):
+            if rem < 0:
+                return -1
+            if rem == 0:
+                return 0
+            min_cost = float('inf')
+            for coin in coins:
+                res = dfs(rem - coin)
+                if res != -1:
+                    min_cost = min(min_cost, res + 1)
+            return min_cost if min_cost != float('inf') else -1
 
-            for i in range(1, n + 1):
-                for j in range(1, V + 1):
-                    if c[i - 1] <= j:
-                        t[i][j] = min(1 + t[i][j - c[i - 1]], t[i - 1][j])
-                    else:
-                        t[i][j] = t[i - 1][j]
-
-            ans = t[n][V] if t[n][V] != float('inf') else -1
-            return ans
-        
-
-        size=len(coins)
-
-        return minCoins(coins,size,amount)
+        return dfs(amount)
