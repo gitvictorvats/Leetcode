@@ -1,4 +1,7 @@
-SELECT A.name AS Employee
-FROM Employee A JOIN Employee B
-ON A.managerId = B.id  
-WHERE A.salary > B.salary
+
+
+
+select e.name as Employee
+from employee e
+left join employee m on  e.managerID = m.id 
+where e.salary > m.salary
