@@ -1,4 +1,5 @@
-SELECT DISTINCT A.email as Email 
-FROM Person A JOIN Person B
-ON A.email = B.email
-WHERE A.id <> B.id
+# Write your MySQL query statement below
+select email
+from Person
+group by email
+having count(email)>1
