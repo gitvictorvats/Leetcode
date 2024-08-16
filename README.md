@@ -11,4 +11,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0182-duplicate-emails](https://github.com/gitvictorvats/Leetcode/tree/master/0182-duplicate-emails) |
 | [0183-customers-who-never-order](https://github.com/gitvictorvats/Leetcode/tree/master/0183-customers-who-never-order) |
 | [0184-department-highest-salary](https://github.com/gitvictorvats/Leetcode/tree/master/0184-department-highest-salary) |
+## Array
+|  |
+| ------- |
+| [0217-contains-duplicate](https://github.com/gitvictorvats/Leetcode/tree/master/0217-contains-duplicate) |
+## Hash Table
+|  |
+| ------- |
+| [0217-contains-duplicate](https://github.com/gitvictorvats/Leetcode/tree/master/0217-contains-duplicate) |
+## Sorting
+|  |
+| ------- |
+| [0217-contains-duplicate](https://github.com/gitvictorvats/Leetcode/tree/master/0217-contains-duplicate) |
 <!---LeetCode Topics End-->
