@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1154-product-sales-analysis-ii](https://github.com/gitvictorvats/Leetcode/tree/master/1154-product-sales-analysis-ii) |
 | [1161-project-employees-i](https://github.com/gitvictorvats/Leetcode/tree/master/1161-project-employees-i) |
 | [1172-sales-analysis-i](https://github.com/gitvictorvats/Leetcode/tree/master/1172-sales-analysis-i) |
+| [1179-game-play-analysis-i](https://github.com/gitvictorvats/Leetcode/tree/master/1179-game-play-analysis-i) |
 ## Array
 |  |
 | ------- |
