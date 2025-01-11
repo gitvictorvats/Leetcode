@@ -1,23 +1,17 @@
-/* Write your T-SQL query statement below */
--- select name as Employee, salary, row_number() over (PARTITION by departmentId order by salary desc) as rankofdept, name as Department
--- from Employee 
--- where Employee.departmentId=Department.id
+# Write your MySQL query statement below
 
-with subquery as (
+with cte as (
+select 
+id,name,salary,departmentID,
 
-select e.name,e.salary,d.name as deptname ,rank() over (PARTITION by departmentId order by salary desc) as rankofdept
-from Employee e 
-left join Department d on d.id=e.departmentId
+rank() over (partition by departmentID order by salary desc ) as rank_salary
+from employee
+
 )
 
-select  deptname as Department, name as Employee, Salary
-from subquery 
-where rankofdept =1
-
--- select e.name,e.salary,d.name ,row_number() over (PARTITION by departmentId order by salary desc) as rankofdept
--- from Employee e 
--- left join Department d on d.id=e.departmentId
-
-
+select t2.name as Department,t1.name as Employee,salary
+from cte t1
+left join department t2 on t1.departmentId=t2.id
+where rank_salary=1
 
 
