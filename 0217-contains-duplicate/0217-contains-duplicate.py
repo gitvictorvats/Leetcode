@@ -1,16 +1,26 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
-        myset=set()
+        temp={}
 
-        for i in range(len(nums)):
+        for i in nums:
 
-            if nums[i] in myset:
-                return True
+            if i in temp.keys():
+
+                temp[i]+=1
             
-            myset.add(nums[i])
+            else:
+                
+                temp[i]=1
 
+        print(str(temp))
 
+        for i in temp.values():
 
+            print(i)
+            if i !=1:
+              return True
+        
+        return False
         
         
